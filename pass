@@ -1,0 +1,76 @@
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    unit_price DECIMAL(10,2),
+    total_amount DECIMAL(10,2),
+    payment_mode VARCHAR(30),
+    order_status VARCHAR(30),
+    shipping_city VARCHAR(50)
+);
+
+
+INSERT INTO orders
+(order_id, order_date, customer_id, product_id, quantity, unit_price, total_amount, payment_mode, order_status, shipping_city)
+VALUES
+(1, '2023-01-01', 101, 1, 2, 65000, 130000, 'Card', 'Delivered', 'Bangalore'),
+(2, '2023-01-02', 102, 3, 1, 30000, 30000, 'UPI', 'Delivered', 'Chennai'),
+(3, '2023-01-03', 103, 5, 1, 28000, 28000, 'NetBanking', 'Delivered', 'Hyderabad'),
+(4, '2023-01-04', 104, 7, 1, 45000, 45000, 'Card', 'Shipped', 'Mumbai'),
+(5, '2023-01-05', 105, 9, 3, 3000, 9000, 'UPI', 'Delivered', 'Delhi'),
+
+(6, '2023-01-06', 106, 11, 2, 2500, 5000, 'UPI', 'Delivered', 'Pune'),
+(7, '2023-01-07', 107, 13, 1, 15000, 15000, 'Card', 'Delivered', 'Kolkata'),
+(8, '2023-01-08', 108, 15, 1, 9000, 9000, 'NetBanking', 'Cancelled', 'Ahmedabad'),
+(9, '2023-01-09', 109, 18, 2, 6500, 13000, 'UPI', 'Delivered', 'Jaipur'),
+(10, '2023-01-10', 110, 20, 1, 3500, 3500, 'Card', 'Delivered', 'Indore'),
+
+(11, '2023-01-11', 111, 21, 1, 35000, 35000, 'Card', 'Shipped', 'Bhopal'),
+(12, '2023-01-12', 112, 22, 2, 2500, 5000, 'UPI', 'Delivered', 'Noida'),
+(13, '2023-01-13', 113, 23, 1, 3000, 3000, 'UPI', 'Delivered', 'Gurgaon'),
+(14, '2023-01-14', 114, 24, 4, 800, 3200, 'UPI', 'Delivered', 'Faridabad'),
+(15, '2023-01-15', 115, 25, 2, 1500, 3000, 'Card', 'Delivered', 'Ghaziabad'),
+
+(16, '2023-01-16', 116, 26, 1, 95000, 95000, 'NetBanking', 'Delivered', 'Bangalore'),
+(17, '2023-01-17', 117, 27, 2, 4500, 9000, 'UPI', 'Delivered', 'Chennai'),
+(18, '2023-01-18', 118, 28, 1, 7000, 7000, 'UPI', 'Delivered', 'Hyderabad'),
+(19, '2023-01-19', 119, 29, 1, 40000, 40000, 'Card', 'Shipped', 'Mumbai'),
+(20, '2023-01-20', 120, 30, 1, 25000, 25000, 'NetBanking', 'Delivered', 'Delhi'),
+
+(21, '2023-01-21', 121, 31, 1, 55000, 55000, 'Card', 'Delivered', 'Pune'),
+(22, '2023-01-22', 122, 32, 1, 48000, 48000, 'UPI', 'Delivered', 'Kolkata'),
+(23, '2023-01-23', 123, 33, 1, 16000, 16000, 'NetBanking', 'Delivered', 'Ahmedabad'),
+(24, '2023-01-24', 124, 34, 2, 2200, 4400, 'UPI', 'Delivered', 'Jaipur'),
+(25, '2023-01-25', 125, 35, 3, 1200, 3600, 'UPI', 'Delivered', 'Indore'),
+
+(26, '2023-01-26', 126, 36, 1, 42000, 42000, 'Card', 'Shipped', 'Bhopal'),
+(27, '2023-01-27', 127, 37, 1, 38000, 38000, 'NetBanking', 'Delivered', 'Noida'),
+(28, '2023-01-28', 128, 38, 1, 36000, 36000, 'Card', 'Delivered', 'Gurgaon'),
+(29, '2023-01-29', 129, 39, 1, 18000, 18000, 'UPI', 'Delivered', 'Faridabad'),
+(30, '2023-01-30', 130, 40, 1, 22000, 22000, 'NetBanking', 'Delivered', 'Ghaziabad'),
+
+(31, '2023-02-01', 131, 41, 2, 2500, 5000, 'UPI', 'Delivered', 'Bangalore'),
+(32, '2023-02-02', 132, 42, 1, 4500, 4500, 'Card', 'Delivered', 'Chennai'),
+(33, '2023-02-03', 133, 43, 1, 3500, 3500, 'UPI', 'Delivered', 'Hyderabad'),
+(34, '2023-02-04', 134, 44, 2, 2800, 5600, 'UPI', 'Delivered', 'Mumbai'),
+(35, '2023-02-05', 135, 45, 1, 9000, 9000, 'Card', 'Delivered', 'Delhi'),
+
+(36, '2023-02-06', 136, 46, 1, 4500, 4500, 'UPI', 'Delivered', 'Pune'),
+(37, '2023-02-07', 137, 47, 2, 3000, 6000, 'NetBanking', 'Delivered', 'Kolkata'),
+(38, '2023-02-08', 138, 48, 1, 12000, 12000, 'Card', 'Delivered', 'Ahmedabad'),
+(39, '2023-02-09', 139, 49, 1, 3500, 3500, 'UPI', 'Delivered', 'Jaipur'),
+(40, '2023-02-10', 140, 50, 3, 1200, 3600, 'UPI', 'Delivered', 'Indore'),
+
+(41, '2023-02-11', 141, 1, 1, 65000, 65000, 'Card', 'Delivered', 'Bhopal'),
+(42, '2023-02-12', 142, 3, 2, 30000, 60000, 'NetBanking', 'Delivered', 'Noida'),
+(43, '2023-02-13', 143, 5, 1, 28000, 28000, 'UPI', 'Delivered', 'Gurgaon'),
+(44, '2023-02-14', 144, 7, 1, 45000, 45000, 'Card', 'Cancelled', 'Faridabad'),
+(45, '2023-02-15', 145, 9, 2, 3000, 6000, 'UPI', 'Delivered', 'Ghaziabad'),
+
+(46, '2023-02-16', 146, 11, 3, 2500, 7500, 'UPI', 'Delivered', 'Bangalore'),
+(47, '2023-02-17', 147, 13, 1, 15000, 15000, 'Card', 'Delivered', 'Chennai'),
+(48, '2023-02-18', 148, 18, 1, 6500, 6500, 'UPI', 'Delivered', 'Hyderabad'),
+(49, '2023-02-19', 149, 20, 2, 3500, 7000, 'NetBanking', 'Delivered', 'Mumbai'),
+(50, '2023-02-20', 150, 21, 1, 35000, 35000, 'Card', 'Delivered', 'Delhi');
